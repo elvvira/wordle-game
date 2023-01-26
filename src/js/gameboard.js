@@ -1,7 +1,4 @@
 const containerBoxes = document.getElementById('container-boxes');
-const rootStyles = document.documentElement.style;
-
-let counterRow = 0;
 
 const createContainer = () => {
   const fragment = document.createDocumentFragment();
@@ -20,12 +17,4 @@ const createContainer = () => {
   containerBoxes.append(fragment);
 };
 
-const boxWordPush = word => {
-  for (let index = 0; index < word.length; index++) {
-    console.dir(word);
-    containerBoxes.children[counterRow].children[index].textContent = word[index];
-  }
-  counterRow++;
-};
 export { createContainer };
-export { boxWordPush };
